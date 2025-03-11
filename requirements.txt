@@ -12,3 +12,4 @@ faker
 tqdm
 ollama
 chromadb
+sentence_transformers
