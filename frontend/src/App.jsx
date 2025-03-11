@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+// Backend API URL (Update this for deployment)
+const API_BASE_URL = "https://rag-recommender.onrender.com";
+
 const ProductCard = ({ product }) => {
   const [expanded, setExpanded] = useState(false);
   return (
@@ -29,25 +32,25 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
+  // Fetch search suggestions dynamically
   useEffect(() => {
     if (searchQuery.length > 1 && showSuggestions) {
       axios
-        .get(`http://localhost:8000/suggestions?query=${searchQuery}`)
-        .then((res) => {
-          setSuggestions(res.data);
-        })
+        .get(`${API_BASE_URL}/suggestions?query=${searchQuery}`)
+        .then((res) => setSuggestions(res.data))
         .catch((err) => console.error("Error fetching suggestions:", err));
     } else {
       setSuggestions([]);
     }
   }, [searchQuery, showSuggestions]);
 
+  // Fetch recommendations based on search query
   const fetchRecommendations = async () => {
     if (!searchQuery.trim()) return;
     setLoading(true);
     setShowSuggestions(false);
     try {
-      const response = await axios.get(`http://localhost:8000/recommendations?query=${searchQuery}`);
+      const response = await axios.get(`${API_BASE_URL}/recommendations?query=${searchQuery}`);
       setRecommendations(response.data);
     } catch (error) {
       console.error("Error fetching recommendations:", error);
@@ -55,6 +58,7 @@ export default function App() {
     setLoading(false);
   };
 
+  // Handle when a user selects a suggestion
   const handleSuggestionClick = (keyword) => {
     setSearchQuery(keyword);
     setShowSuggestions(false);
@@ -97,12 +101,16 @@ export default function App() {
 
           {/* Suggestions Dropdown */}
           {showSuggestions && suggestions.length > 0 && (
-            <ul className="absolute w-full bg-white border border-gray-200 rounded-lg shadow-lg mt-2 z-10 max-h-60 overflow-y-auto animate-fade-in">
+            <ul
+              className="absolute w-full bg-white border border-gray-200 rounded-lg shadow-lg mt-2 z-10 max-h-60 overflow-y-auto animate-fade-in"
+              role="listbox"
+            >
               {suggestions.map((keyword, index) => (
                 <li
                   key={index}
                   className="p-3 cursor-pointer hover:bg-blue-50 transition-all duration-200 transform hover:translate-x-2"
                   onClick={() => handleSuggestionClick(keyword)}
+                  role="option"
                 >
                   {keyword}
                 </li>
