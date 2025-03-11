@@ -111,3 +111,11 @@ async def get_recommendations(query: str = Query(..., min_length=1)):
     logger.info(f"Top Recommendations:\n{df[['name', 'weighted_score']].head(5)}")
 
     return df.head(10).to_dict(orient="records")
+
+
+# Ensure correct port binding for Render deployment
+if __name__ == "__main__":
+    import uvicorn
+
+    PORT = int(os.getenv("PORT", 8000))  # Read the port assigned by Render
+    uvicorn.run(app, host="0.0.0.0", port=PORT)
