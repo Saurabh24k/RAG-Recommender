@@ -127,6 +127,8 @@ RAG-Recommender/
 🔹 **This project isn’t just another search engine.**  
 🔹 **It’s a next-gen product discovery system designed for the future of e-commerce.**
 
+**⏳ Time Taken : 7 Hours**
+
 ---
 
 ## **🎯 Future Potential & Roadmap**
