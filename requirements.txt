@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pandas
+numpy
+transformers
+torch
+scikit-learn
+faiss-cpu
+python-dotenv
+requests
+faker
+tqdm
+ollama

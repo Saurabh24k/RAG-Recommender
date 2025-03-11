@@ -1,0 +1,47 @@
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment files
+.env
+*.env
+.DS_Store
+
+# Ignore virtual environment directories
+venv/
+.env/
+.venv/
+
+
+# Ignore logs and temp files
+logs/
+*.log
+*.out
+*.pid
+tmp/
+
+
+# Ignore node_modules for frontend
+frontend/node_modules/
+frontend/.parcel-cache/
+frontend/.next/
+frontend/build/
+frontend/dist/
+
+# Ignore lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# Ignore MacOS system files
+.DS_Store
+Thumbs.db
