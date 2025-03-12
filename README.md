@@ -28,7 +28,7 @@ This project goes beyond conventional e-commerce search—it **understands custo
 | **Component**        | **Technology Used**    | **Why It's Unique** |
 |----------------------|----------------------|----------------------|
 | **Backend**         | FastAPI, ChromaDB, Sentence Transformers | High-speed API with real-time AI-powered recommendations |
-| **Vector Storage**  | ChromaDB, FAISS | Stores & retrieves high-dimensional embeddings for semantic matching |
+| **Vector Storage**  | ChromaDB | Stores & retrieves high-dimensional embeddings for semantic matching |
 | **AI Model**        | Sentence Transformers (BAAI/bge-large-en-v1.5) | Understands **natural language queries** and ranks products by intent |
 | **Frontend**        | React.js, Vite, Tailwind CSS | Fast, responsive UI with **real-time search suggestions** |
 | **Data Processing** | Pandas, NumPy, Faker | Generates **highly realistic product data** |
@@ -105,7 +105,7 @@ RAG-Recommender/
 ---
 
 ## **📊 Key Performance Enhancements**
-- **Optimized Vector Storage** → **FAISS + ChromaDB** ensures fast retrieval  
+- **Optimized Vector Storage** → **ChromaDB** ensures fast retrieval  
 - **Efficient AI Embeddings** → Uses **Sentence Transformers** for deep semantic understanding  
 - **Asynchronous Processing** → Ensures ultra-fast search results  
 - **Flexible Ranking System** → Easily tweakable for **business-specific needs**  
