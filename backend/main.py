@@ -23,7 +23,7 @@ recommendation_engine = RecommendationEngine()
 # Allow CORS for frontend development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://rag-recommender-1.onrender.com", "https://your-frontend-url.onrender.com"],
+    allow_origins=["https://rag-recommender.onrender.com", "https://rag-recommender-1.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
