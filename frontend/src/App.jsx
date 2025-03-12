@@ -32,7 +32,6 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  // Fetch search suggestions dynamically
   useEffect(() => {
     if (searchQuery.length > 1 && showSuggestions) {
       axios
@@ -58,7 +57,6 @@ export default function App() {
     setLoading(false);
   };
 
-  // Handle when a user selects a suggestion
   const handleSuggestionClick = (keyword) => {
     setSearchQuery(keyword);
     setShowSuggestions(false);
