@@ -35,7 +35,7 @@ This project goes beyond conventional e-commerce search—it **understands custo
 | **Scalability**     | Microservices-ready architecture | Easily adaptable to **millions of products & users** |
 
 **🔑 Key Differentiator:**  
-Instead of relying on static rule-based filtering, this system uses **dynamic AI-powered ranking**—a **game-changer** for product search.
+Instead of relying on static rule-based filtering, this system uses **dynamic AI-powered ranking for product search.
 
 ---
 
