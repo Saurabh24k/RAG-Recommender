@@ -7,7 +7,7 @@
 
 ---
 
-Click to watch the [demo video](demo/RAG-Recommender-demo.mov).
+Click to watch the [demo video](https://github.com/Saurabh24k/RAG-Recommender/tree/main/demo/RAG-Recommender-demo.mov).
 
 
 ## **📌 Why This Project Stands Out**
