@@ -7,6 +7,9 @@
 
 ---
 
+Click to watch the [demo video](demo/RAG-Recommender-demo.mov).
+
+
 ## **📌 Why This Project Stands Out**
 Traditional recommendation engines rely on **keyword matching** or **basic collaborative filtering**.  
 This **AI-powered system** is fundamentally different:  
