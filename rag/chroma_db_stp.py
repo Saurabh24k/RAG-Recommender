@@ -1,4 +1,3 @@
-# chroma_db_stp.py
 import os
 import json
 import numpy as np
@@ -35,7 +34,7 @@ def populate_chroma_db(products, collection_name="products"):
 
     print("Storing product data in ChromaDB...")
     for product in tqdm(products):
-        # Data validation FIRST
+        # Data validation
         required_fields = ["id", "name", "effects", "ingredients", "description"]
         for field in required_fields:
             if field not in product:
